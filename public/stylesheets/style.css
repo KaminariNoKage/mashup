@@ -26,6 +26,7 @@ a {
 	display: inline-block;
 	vertical-align: top;
 	padding-right:70px;
+	max-width: 200px;
 }
 
 #proj_block {
@@ -38,6 +39,7 @@ a {
 #image_block, #displaypublic {
 	display: inline-block;
 	vertical-align: top;
+	max-width: 50%;
 }
 
 .public_img {
