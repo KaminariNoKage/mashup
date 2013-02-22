@@ -39,7 +39,7 @@ a {
 #image_block, #displaypublic {
 	display: inline-block;
 	vertical-align: top;
-	max-width: 50%;
+	max-width: 60%;
 }
 
 .public_img {
