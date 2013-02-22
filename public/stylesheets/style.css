@@ -32,6 +32,7 @@ a {
 #proj_block {
 	display: inline-block;
 	vertical-align: top;
+	width: 300px;
 	overflow: hidden;
 }
 
