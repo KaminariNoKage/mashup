@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	script(src='http://code.jquery.com/jquery.js')
+	script(src='/javascripts/handlers.js')
+	h1= title
+	p Welcome #{name}
+	include _sidebar
+	include _displaypublic

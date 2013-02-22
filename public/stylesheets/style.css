@@ -1,0 +1,58 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#image_block img {
+	width:200px;
+}
+
+#image_block div {
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px 5px 5px 5px;
+}
+
+#editmode textarea {
+	max-width: 200px;
+	min-width: 200px;
+}
+
+#sidebar {
+	display: inline-block;
+	vertical-align: top;
+	padding-right:70px;
+}
+
+#proj_block {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	overflow: hidden;
+}
+
+#image_block, #displaypublic {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.public_img {
+	display: inline-block;
+	vertical-align: top;
+	height:200px;
+	max-width: 150px;
+	padding-right: 40px;
+}
+
+.container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.pub_display {
+	padding-bottom: 20px;
+}

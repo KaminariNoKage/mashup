@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	script(src='http://code.jquery.com/jquery.js')
+	script(src='/javascripts/handlers.js')
+
+	h1= title
+	include _sidebar
+
+	div(id="proj_block")
+		h1= name
+		| This project is by #{maker}
+		div
+			h3 Description
+			p #{description}
+			br
+			input(type="button", id="editproj", value="Edit Project")
+			input(type="button", id="delete", class="#{proj_id}", value="Delete Project")
+
+		div(id="editmode", class="#{proj_id}")
+			| Project Name:
+			input(type="text", id="chng_name", class="#{proj_id}", value="#{title}")
+			br
+			| Description:
+			br
+			textarea(id="description")
+			br
+			input(type="button", id="edit_update", value="Update")
+
+	div(id="image_block")
+		div
+			| Enter URL: 
+			input(type="text", id="img_url", name="img_url")
+			input(type="button", id="addimg", class="#{proj_id}", value="Add Image")
+		include _imagelist

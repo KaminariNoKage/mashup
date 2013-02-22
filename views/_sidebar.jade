@@ -1,0 +1,9 @@
+div(id="sidebar")
+	a(href="/") Home
+
+	h3 My Projects
+	each proj, i in my_proj
+		div(value=proj)
+			a(href="/myproject/" + "#{proj._id}") #{proj.pname}
+	br
+	input(type="button", id="make_new", value="Make New Project")

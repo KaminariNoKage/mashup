@@ -1,0 +1,9 @@
+div(id="displaypublic")
+	h2 Newest Projects
+	each proj, i in pubproj
+		div(value=proj, class="pub_display")
+			image(src="#{proj.display_url}", class="public_img")
+			div(class="container")
+				h3 #{proj.pname}
+				p #{proj.description}
+				a(href="/project/#{proj._id}") CHECK IT OUT

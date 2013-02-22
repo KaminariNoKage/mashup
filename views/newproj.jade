@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	script(src='http://code.jquery.com/jquery.js')
+	script(src='/javascripts/handlers.js')
+	h1= title
+	h2= name
+	div(id="newproj")
+		| Project Name: 
+		input(type="text", id="projname", name="pname")
+		br
+		| Description
+		br
+		textarea(id="descript", name="description")
+		br
+		input(type="button", id="submit", name="Submit", value="Create")

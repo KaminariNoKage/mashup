@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	script(src='http://code.jquery.com/jquery.js')
+	script(src='/javascripts/handlers.js')
+
+	h1= title
+	include _sidebar
+
+	div(id="proj_block")
+		h1= name
+		| This project is by #{maker}
+		div
+			h3 Description
+			p #{description}
+
+	div(id="image_block")
+		include _imagelist
