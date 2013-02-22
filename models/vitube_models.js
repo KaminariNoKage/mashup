@@ -22,7 +22,7 @@ var projectSchema = mongoose.Schema({
 });
 
 var imageSchema = mongoose.Schema({
-	index_pos: String,
+	index_pos: Number,
 	url: String,
 	proj_id: String
 });
