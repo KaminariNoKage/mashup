@@ -5,6 +5,7 @@ $(document).ready(function(){
 			, description = $("#descript").val()
 			, priv = $("#priv").val();
 		$.post("/make_project", {pname: name, description: description, priv: priv});
+		return false;
 	});
 
 	//EDIT THE PROJECT
@@ -28,12 +29,14 @@ $(document).ready(function(){
 			, newname = $("#chng_name").val()
 			, des = $("#description").val();
 		$.post("/edit_project", {curid: curid, name: newname, des: des});
+		return false;
 	});
 
 	$('#delete').click(function(){
 		if(confirm("Do you want to delete this project?")){
 			var projectid = $("#delete").attr("class");
 			$.post("/delete_project", {proj_id: projectid});
+			return false;
 		}
 	});
 
@@ -47,6 +50,7 @@ $(document).ready(function(){
 		}
 		else{
 			$.post("/add_image", {actid: proj_id, url: new_url});
+			return false;
 		};
 	});
 
