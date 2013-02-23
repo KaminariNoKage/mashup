@@ -2,3 +2,5 @@ h2 All Images
 each img, i in imglist
 	div(value=img)
 		image(src="#{img.url}")
+		br
+		input(type="button", id="#{img._id}", class="img_delete", value="Delete")

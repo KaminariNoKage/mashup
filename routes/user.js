@@ -124,6 +124,18 @@ exports.deleteproj = function(req, res){
 	});
 };
 
+exports.deleteimg = function(req, res){
+	var img_id = req.body.img_id;
+	console.log(img_id);
+	Images.find({'_id': img_id}).sort().exec(function(err, docs){
+		console.log(docs[0]);
+		docs[0].remove();
+		if (err)
+			return console.log("Error in removing image");
+		res.redirect('/');
+	});
+};
+
 exports.visit = function(req, res){
 	var actid = req.session.user._id;
 	Project.find({authorid: actid}).sort().exec(function(err, my_proj){

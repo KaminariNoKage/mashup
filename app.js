@@ -52,10 +52,11 @@ app.get('/new_project', facebookGetUser(), user.newproj);
 app.get('/myproject/:project', facebookGetUser(), user.projpage);
 app.get('/project/:project', facebookGetUser(), user.visit);
 
-app.post('/make_project', user.makenewproj);
+app.post('/project/make', user.makenewproj);
 app.post('/add_image', user.addimg);
-app.post('/edit_project', user.projedit);
-app.post('/delete_project', user.deleteproj);
+app.post('/project/edit', user.projedit);
+app.post('/project/delete/project', user.deleteproj);
+app.post('/project/delete/image', user.deleteimg);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

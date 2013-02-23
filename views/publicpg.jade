@@ -3,6 +3,11 @@ extends layout
 block content
 	script(src='http://code.jquery.com/jquery.js')
 	script(src='/javascripts/handlers.js')
+	script(src='/javascripts/rcarosel/widget/lib/jquery.ui.core.js')
+	script(src='/javascripts/rcarosel//widget/lib/jquery.ui.widget.min.js')
+	script(src='/javascripts/rcarosel//widget/lib/jquery.ui.rcarousel.min.js')
+	script(src='/javascripts/refresher.js')
+
 
 	h1= title
 	include _sidebar
@@ -15,4 +20,4 @@ block content
 			p #{description}
 
 	div(id="image_block")
-		include _imagelist
+		include _mockgif
