@@ -77,9 +77,7 @@ exports.projpage = function(req, res){
 };
 
 exports.projedit = function(req,res){
-	console.log(req.body);
 	Project.find({_id: req.body.curid}).sort().exec(function(err, docs){
-		console.log(docs[0]);
 		var proj = docs[0]
 			, des = proj.description
 			, newname = req.body.name;
@@ -97,7 +95,6 @@ exports.projedit = function(req,res){
 };
 
 exports.addimg = function(req,res){
-	console.log(req.body);
 	var project_id = req.body.actid
 		, newurl = req.body.url;
 	Images.find({'proj_id': project_id}).sort('index_pos').exec(function(err, imgs){	
